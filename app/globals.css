@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@source "../src/**/*.{ts,tsx}";
+
+:root {
+  --background: #010008;
+  --foreground: #ededed;
+  --aetheria-void: #050510;
+  --aetheria-surface: #0b0b1f;
+  --aetheria-primary: #6d28d9;
+  --aetheria-accent: #a855f7;
+  --aetheria-signal: #60a5fa;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans), var(--font-aetheria-body);
+  --font-mono: var(--font-geist-mono), var(--font-aetheria-terminal);
+  --font-display: var(--font-aetheria-display);
+  --font-body: var(--font-aetheria-body);
+  --font-terminal: var(--font-aetheria-terminal);
+}
+
+html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  overflow: hidden;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-aetheria-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+.aetheria-command-center {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(109, 40, 217, 0.45) transparent;
+}
+
+.aetheria-command-center::-webkit-scrollbar {
+  width: 6px;
+}
+
+.aetheria-command-center::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #6d28d9, #60a5fa);
+  border-radius: 999px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aetheria-command-center {
+    scroll-behavior: auto;
+  }
+}

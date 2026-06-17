@@ -1,0 +1,14 @@
+export { ProjectGalaxyOverlay } from "@/features/project-galaxy/components/ProjectGalaxyOverlay";
+export { ProjectGalaxyScene } from "@/features/project-galaxy/scenes/ProjectGalaxyScene";
+export { ProjectPlanet } from "@/features/project-galaxy/components/ProjectPlanet";
+export { ProjectOrbitRing } from "@/features/project-galaxy/components/ProjectOrbitRing";
+export { ProjectInfoPanel } from "@/features/project-galaxy/components/ProjectInfoPanel";
+export { ProjectTooltip } from "@/features/project-galaxy/components/ProjectTooltip";
+export { PlanetAtmosphere } from "@/features/project-galaxy/scenes/PlanetAtmosphere";
+export { GalaxyCameraController } from "@/features/project-galaxy/systems/GalaxyCameraController";
+export { useGalaxyStore } from "@/features/project-galaxy/stores/galaxy.store";
+export { CameraDirector, useCameraDirectorStore } from "@/camera";
+export { usePlanetOrbit, computeOrbitPosition } from "@/features/project-galaxy/hooks/usePlanetOrbit";
+export { GALAXY_PROJECTS, getGalaxyProjectById } from "@/features/project-galaxy/data/projects";
+export { GALAXY_CONFIG } from "@/features/project-galaxy/config/galaxy.config";
+export type { GalaxyProject, GalaxyProjectId } from "@/features/project-galaxy/types/project.types";

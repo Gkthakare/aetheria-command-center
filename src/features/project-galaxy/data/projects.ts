@@ -1,0 +1,142 @@
+import type { GalaxyProject } from "@/features/project-galaxy/types/project.types";
+
+export const GALAXY_PROJECTS: readonly GalaxyProject[] = [
+  {
+    id: "applyforge",
+    name: "ApplyForge",
+    shortLabel: "APPLYFORGE",
+    summary: "AI job auto-apply + ResumeLens ATS optimizer",
+    description:
+      "Full-stack platform: upload a resume, get ATS scoring and PDF variants (ResumeLens), discover matched jobs, and auto-apply with Playwright agents. Docker + Kubernetes ready.",
+    architecture:
+      "Next.js 15 frontend · FastAPI + PostgreSQL/pgvector · Redis/Celery workers · LangGraph agents · embedded ResumeLens module.",
+    techStack: ["Next.js", "FastAPI", "PostgreSQL", "Celery", "Playwright"],
+    githubUrl: "https://github.com/Gkthakare/applyforge",
+    liveDemoUrl: "http://localhost:3000/resume-lens",
+    runLocally: [
+      "cd Projects/job-applyer && docker compose up -d",
+      "Open http://localhost:3000/resume-lens (public demo, no login)",
+      "Dashboard: http://localhost:3000/dashboard/resume-analyzer",
+    ],
+    status: "local",
+    orbitRadius: 3.05,
+    orbitSpeed: 0.2,
+    orbitInclination: 0.24,
+    phase: 0.15,
+    size: 0.17,
+    color: "#38bdf8",
+    emissive: "#0284c7",
+    ringColor: "#7dd3fc",
+    planetType: "ice",
+  },
+  {
+    id: "aetheria-vr-rpg",
+    name: "Aetheria VR RPG",
+    shortLabel: "AETHERIA VR",
+    summary: "Quest 3 VR RPG — island hub, dungeons, AI backend",
+    description:
+      "Meta Quest 3 open-world VR RPG: procedural island hub, SAO-style dungeons, water/elemental magic, and a unified Python backend (intent spawn, heightmaps, gesture/VFX/3D).",
+    architecture:
+      "Unity 2022.3 URP · OpenXR Quest 3 · FastAPI backend :8001 · IslandWorldBuilder + ChunkManager · Convai NPCs.",
+    techStack: ["Unity", "C#", "OpenXR", "FastAPI", "Python"],
+    githubUrl: "https://github.com/Gkthakare/aetheria-vr-rpg",
+    liveDemoUrl: "/aetheria",
+    runLocally: [
+      "Open unity-project in Unity Hub 2022.3 LTS",
+      "cd backend && pip install -r requirements.txt && python main.py",
+      "Play HelloVR.unity or build APK for Quest",
+    ],
+    status: "quest-build",
+    orbitRadius: 4.15,
+    orbitSpeed: 0.12,
+    orbitInclination: 0.32,
+    phase: 2.75,
+    size: 0.21,
+    color: "#f472b6",
+    emissive: "#db2777",
+    ringColor: "#f9a8d4",
+    planetType: "neon",
+  },
+  {
+    id: "ai-portfolio-demos",
+    name: "AI Portfolio Demos",
+    shortLabel: "AI DEMOS",
+    summary: "NPC backend, RAG SaaS, LangChain agent",
+    description:
+      "Four recruiter-facing AI demos: conversational NPC with memory, RAG document Q&A, LangChain tool agent, and Unity NPC client snippet.",
+    architecture:
+      "FastAPI NPC + RAG backends · React/Vite RAG UI · LangChain CLI agent · PowerShell start-all orchestration.",
+    techStack: ["FastAPI", "React", "LangChain", "OpenAI", "Unity"],
+    githubUrl: "https://github.com/Gkthakare/ai-portfolio-projects",
+    runLocally: [
+      "cd ai-portfolio-projects && .\\scripts\\start-all.ps1",
+      "RAG UI: http://127.0.0.1:5173",
+      "NPC API: http://127.0.0.1:8000/docs",
+      "RAG API: http://127.0.0.1:8001/docs",
+    ],
+    status: "local",
+    orbitRadius: 5.4,
+    orbitSpeed: 0.08,
+    orbitInclination: 0.14,
+    phase: 5.45,
+    size: 0.14,
+    color: "#34d399",
+    emissive: "#059669",
+    ringColor: "#6ee7b7",
+    planetType: "tech",
+  },
+  {
+    id: "command-center",
+    name: "Aetheria Command Center",
+    shortLabel: "PORTFOLIO",
+    summary: "This site — 3D project galaxy + boot sequence",
+    description:
+      "Interactive sci-fi portfolio: boot terminal, black-hole WebGL scene, orbiting project planets, and per-project detail pages with GitHub and run instructions.",
+    architecture:
+      "Next.js 16 · React Three Fiber · Zustand · Vercel deployment · project registry-driven galaxy.",
+    techStack: ["Next.js", "Three.js", "TypeScript", "Tailwind", "Vercel"],
+    githubUrl: "https://github.com/Gkthakare/aetheria-command-center",
+    liveDemoUrl: "/",
+    status: "live",
+    orbitRadius: 2.4,
+    orbitSpeed: 0.28,
+    orbitInclination: 0.1,
+    phase: 3.9,
+    size: 0.12,
+    color: "#a78bfa",
+    emissive: "#7c3aed",
+    ringColor: "#c4b5fd",
+    planetType: "gas",
+  },
+  {
+    id: "hand-tracking",
+    name: "Hand Tracking Lab",
+    shortLabel: "HAND TRACKING",
+    summary: "Unity 6 Quest IOBT + XR Hands sample",
+    description:
+      "Standalone Unity 6 tech demo: hand tracking diagnostics, full-body IOBT avatar retargeting, and AI-synthesized leg motion. Kept separate as a reference sample scene.",
+    architecture:
+      "Unity 6 · Meta XR SDK 203 · XR Hands · Movement SDK · 3 custom bridge scripts.",
+    techStack: ["Unity 6", "OpenXR", "Meta XR", "C#"],
+    githubUrl: "https://github.com/Gkthakare/hand-tracking",
+    runLocally: [
+      "Open handTracking in Unity 6000.3",
+      "Open Assets/Scenes/SampleScene.unity",
+      "Build & Run to Quest",
+    ],
+    status: "quest-build",
+    orbitRadius: 4.8,
+    orbitSpeed: 0.095,
+    orbitInclination: -0.3,
+    phase: 4.1,
+    size: 0.11,
+    color: "#fbbf24",
+    emissive: "#d97706",
+    ringColor: "#fde68a",
+    planetType: "rocky",
+  },
+] as const;
+
+export function getGalaxyProjectById(id: string): GalaxyProject | undefined {
+  return GALAXY_PROJECTS.find((project) => project.id === id);
+}

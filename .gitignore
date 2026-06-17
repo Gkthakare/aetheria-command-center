@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+.next/
+out/
+dist/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Vercel
+.vercel/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Debug
+npm-debug.log*
+*.log
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
