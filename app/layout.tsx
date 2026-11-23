@@ -1,6 +1,7 @@
 import { aetheriaFontVariables } from "./fonts";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { siteUrl } from "@/features/portfolio/site-url";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,9 +14,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const title = "Gaurav Thakare · AI Engineering Portfolio";
+const description =
+  "Gaurav Thakare’s engineering portfolio. Explore document RAG, Python LLM agents, and workflow automation projects.";
+
 export const metadata: Metadata = {
-  title: "Aetheria Command Center",
-  description: "Director interface for the Aetheria universe",
+  metadataBase: siteUrl ? new URL(siteUrl) : undefined,
+  title: { default: title, template: "%s · Gaurav Thakare" },
+  description,
+  openGraph: { title, description, type: "website", siteName: "Aetheria Command Center" },
 };
 
 export default function RootLayout({
@@ -28,7 +35,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${aetheriaFontVariables} h-full antialiased`}
     >
-      <body className="m-0 h-dvh w-full overflow-hidden font-[family-name:var(--font-aetheria-body)]">
+      <body>
         {children}
       </body>
     </html>

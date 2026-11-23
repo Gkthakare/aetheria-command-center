@@ -14,7 +14,7 @@ export function OperatorPanel({ operator }: OperatorPanelProps) {
         <div className="space-y-4">
           <Label>{operator.role}</Label>
           <div>
-            <Label as="p">Experience</Label>
+            <Label as="p">Engineering focus</Label>
             <Subheading className="mt-1 !max-w-none !text-sm">
               {operator.experience}
             </Subheading>

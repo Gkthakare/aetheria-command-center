@@ -38,7 +38,7 @@ export function ShowcaseTopCommandBar() {
                 </Label>
               </div>
               <StatusIndicator label="Network" value="ONLINE" tone="online" compact />
-              <NeonLink href="/" variant="ghost" className="!py-1.5">
+              <NeonLink href="/command-center" variant="ghost" className="!py-1.5">
                 Exit
               </NeonLink>
             </div>
