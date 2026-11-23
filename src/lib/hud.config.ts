@@ -39,8 +39,8 @@ export const HUD_CONFIG: HudConfig = {
   operator: {
     name: "GAURAV THAKARE",
     role: "AI ENGINEER · WORLD BUILDER",
-    experience: "5+ YEARS",
-    currentMission: "Aetheria Command Center Deployment",
+    experience: "Python, LLM agents, and workflow automation",
+    currentMission: "Local agents, asset tooling, and Quest interaction",
   },
   topBar: {
     systemStatus: "ONLINE",
@@ -49,15 +49,15 @@ export const HUD_CONFIG: HudConfig = {
   projects: {
     heading: "ACTIVE PROJECTS",
     items: [
-      { id: "ai-eng", label: "AI Engineering", status: "active" },
-      { id: "aetheria-rpg", label: "Aetheria RPG", status: "dev" },
-      { id: "agent-systems", label: "Agent Systems", status: "active" },
+      { id: "document-rag", label: "Document Q&A", status: "active" },
+      { id: "aethel", label: "AETHEL local agents", status: "dev" },
+      { id: "aether-studio", label: "Aether Studio", status: "dev" },
     ],
   },
   navigation: {
     heading: "NAVIGATION",
     items: [
-      { id: "command-center", label: "COMMAND CENTER", href: "#command-center" },
+      { id: "portfolio", label: "PORTFOLIO", href: "/" },
       { id: "project-galaxy", label: "PROJECT GALAXY", href: "#project-galaxy" },
       { id: "neural-core", label: "NEURAL CORE", href: "#neural-core" },
       { id: "mission-log", label: "MISSION LOG", href: "#mission-log" },

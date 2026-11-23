@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aetheria Command Center
 
-## Getting Started
+Gaurav Thakare’s AI engineering portfolio. The homepage links to engineering case studies, recent project milestones, and the interactive project galaxy.
 
-First, run the development server:
+## Run locally
 
-```bash
+```sh
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000. Use `/command-center` for the interactive WebGL experience and `/aetheria` for the VR world showcase.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Run `npm run build` for the production build and `npm start` to serve it locally. The build downloads the existing Google Fonts through Next.js.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Update the portfolio
 
-## Learn More
+Edit `src/features/portfolio/projects.ts` for the homepage and case studies. Each entry describes what is available to review and includes public source links where available. The existing visual project registry lives at `src/features/project-galaxy/data/projects.ts`.
 
-To learn more about Next.js, take a look at the following resources:
+## Attach a custom domain
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Deploy the portfolio to the existing `aetheria-command-center` Vercel project.
+2. Once you own the domain, open the project’s **Settings → Domains** in Vercel and add it to the **Production** environment.
+3. Add the DNS records shown by Vercel at your domain registrar. Wait for Vercel to verify the domain and issue HTTPS.
+4. Set `NEXT_PUBLIC_SITE_URL` to the final HTTPS origin in Vercel’s Production environment and redeploy so the page metadata uses your preferred domain.
+5. Open the domain in a private browser window and check that the portfolio opens directly without signing in. Submit the homepage URL in the application.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[Vercel custom domain guide](https://vercel.com/docs/domains/set-up-custom-domain)

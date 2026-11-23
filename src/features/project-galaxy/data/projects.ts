@@ -12,10 +12,9 @@ export const GALAXY_PROJECTS: readonly GalaxyProject[] = [
       "Next.js 15 frontend · FastAPI + PostgreSQL/pgvector · Redis/Celery workers · LangGraph agents · embedded ResumeLens module.",
     techStack: ["Next.js", "FastAPI", "PostgreSQL", "Celery", "Playwright"],
     githubUrl: "https://github.com/Gkthakare/applyforge",
-    liveDemoUrl: "http://localhost:3000/resume-lens",
     runLocally: [
-      "cd Projects/job-applyer && docker compose up -d",
-      "Open http://localhost:3000/resume-lens (public demo, no login)",
+      "git clone https://github.com/Gkthakare/applyforge.git && cd applyforge && docker compose up -d",
+      "Open http://localhost:3000/resume-lens (local demo, no login)",
       "Dashboard: http://localhost:3000/dashboard/resume-analyzer",
     ],
     status: "local",
@@ -33,7 +32,7 @@ export const GALAXY_PROJECTS: readonly GalaxyProject[] = [
     id: "aetheria-vr-rpg",
     name: "Aetheria VR RPG",
     shortLabel: "AETHERIA VR",
-    summary: "Quest 3 VR RPG — island hub, dungeons, AI backend",
+    summary: "Unity and OpenXR Quest prototype · Skybound locomotion",
     description:
       "Meta Quest 3 open-world VR RPG: procedural island hub, SAO-style dungeons, water/elemental magic, and a unified Python backend (intent spawn, heightmaps, gesture/VFX/3D).",
     architecture:
@@ -96,7 +95,7 @@ export const GALAXY_PROJECTS: readonly GalaxyProject[] = [
       "Next.js 16 · React Three Fiber · Zustand · Vercel deployment · project registry-driven galaxy.",
     techStack: ["Next.js", "Three.js", "TypeScript", "Tailwind", "Vercel"],
     githubUrl: "https://github.com/Gkthakare/aetheria-command-center",
-    liveDemoUrl: "/",
+    liveDemoUrl: "/command-center",
     status: "live",
     orbitRadius: 2.4,
     orbitSpeed: 0.28,
@@ -118,7 +117,6 @@ export const GALAXY_PROJECTS: readonly GalaxyProject[] = [
     architecture:
       "Unity 6 · Meta XR SDK 203 · XR Hands · Movement SDK · 3 custom bridge scripts.",
     techStack: ["Unity 6", "OpenXR", "Meta XR", "C#"],
-    githubUrl: "https://github.com/Gkthakare/hand-tracking",
     runLocally: [
       "Open handTracking in Unity 6000.3",
       "Open Assets/Scenes/SampleScene.unity",

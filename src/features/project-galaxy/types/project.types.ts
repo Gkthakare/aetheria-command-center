@@ -9,7 +9,8 @@ export interface GalaxyProject {
   description: string;
   architecture: string;
   techStack: readonly string[];
-  githubUrl: string;
+  /** Omit when no public repository exists. Do not invent a URL. */
+  githubUrl?: string;
   liveDemoUrl?: string;
   /** How to run locally when no hosted demo exists */
   runLocally?: readonly string[];

@@ -82,9 +82,11 @@ export function ProjectInfoPanel() {
             </div>
 
             <div className="mt-6 flex flex-wrap gap-2">
-              <NeonLink href={project.githubUrl} variant="signal" target="_blank" rel="noopener noreferrer">
-                GitHub →
-              </NeonLink>
+              {project.githubUrl ? (
+                <NeonLink href={project.githubUrl} variant="signal" target="_blank" rel="noopener noreferrer">
+                  GitHub →
+                </NeonLink>
+              ) : null}
               {project.liveDemoUrl && (
                 <NeonLink
                   href={project.liveDemoUrl}
